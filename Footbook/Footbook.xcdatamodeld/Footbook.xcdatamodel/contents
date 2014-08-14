@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="profile" maxCount="1" deletionRule="Nullify" destinationEntity="Profile" inverseName="comments" inverseEntity="Profile" syncable="YES"/>
+    </entity>
+    <entity name="Profile" representedClassName="Profile">
+        <attribute name="feet" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hairiness" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="shoeSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="smelliness" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="profile" inverseEntity="Comment" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Comment" positionX="279" positionY="252" width="128" height="75"/>
+        <element name="Profile" positionX="261" positionY="189" width="128" height="148"/>
+    </elements>
+</model>
